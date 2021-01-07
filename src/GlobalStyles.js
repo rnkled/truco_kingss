@@ -10,7 +10,10 @@ export default createGlobalStyle`
     height: 100vh;
     overflow-y: hidden;
     color: white;
-    background-image: linear-gradient(#fff, #bbb);
+    background-image: url('./assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    //background-image: linear-gradient(#fff, #bbb);
   }
   
   *::-webkit-scrollbar {
@@ -23,6 +26,11 @@ export default createGlobalStyle`
     color: inherit;
     font-size: inherit;
     text-decoration: none;
+  }
+  
+  .App{
+    display: flex;
+    flex-direction: column;
   }
 
   `

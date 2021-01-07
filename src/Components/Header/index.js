@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SideMenu from './sideMenu';
 import { TopMenu, Title, LeftMenuButton, RightMenuButton } from "./styles";
+import { Link } from 'react-router-dom';
 
 
 
@@ -16,7 +17,7 @@ const Header = (props) => {
         <div>
             <TopMenu>
                 <LeftMenuButton onClick={toggleLeft} open={LeftIsOpen}>Menu</LeftMenuButton>
-                <Title><a href='/'>Truco Kingss</a></Title>
+                <Title><Link to='/'>Truco Kingss</Link></Title>
                 <RightMenuButton onClick={toggleRight} open={RightIsOpen}>Perfil</RightMenuButton>
             </TopMenu>
 
