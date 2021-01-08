@@ -19,13 +19,12 @@ export const Content = styled.div`
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    ${({ leave }) => leave ? "animation: leaveHome 1.1s forwards;" : ""}
+    ${({ leave }) => leave ? "animation: leaveLogin 0.8s forwards;" : ""}
     
 
-    @keyframes leaveHome{
+    @keyframes leaveLogin{
         100% {
             opacity: 0%;
-            transform: translateY(-80%);
         }
     }
     
@@ -33,26 +32,37 @@ export const Content = styled.div`
 
 export const Text = styled.div`
     margin: 20px;
-    animation: falling 1.5s forwards;
+    animation: summoning 1.5s forwards;
     position: relative;
-    top: -7vh;
+    top: -3vh;
     opacity: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    h1{
-    font-size: 4.5vw;
-    margin-bottom: 20px;
-    }
-    h3{
-        margin-bottom: 10px;
+    h2{
+        margin-left: 20px;
     }
 
-    @keyframes falling{
-        0% {
-            transform: translateY(-50%);
-        }
+    p{
+        font-size: 1.2vw;
+        margin-top: 30px;
+    }
+    input{
+        border: 2px solid white;
+        border-radius: 20px;
+        width: 100%;
+        min-width: 100px;
+        height: 7vh;
+        margin: 15px 0px;
+        padding: 0 15px;
+        font-size: 1.4vw;
+
+    }
+
+    @keyframes summoning{
         100% {
             opacity: 100%;
-            transform: translateY(0%);
         }
     }
 `
@@ -60,22 +70,23 @@ export const Text = styled.div`
 export const Image = styled.div`
     width: fit-content;
     opacity: 0%;
-    animation: showHome 1.5s forwards;    
+    animation: showLogin 1s forwards;    
 
     img{
         position: relative;
         float: right;
-        width: 20vw;
+        width: 15vw;
         padding: 0;
     }
 
-    @keyframes showHome{
-        0% {
-            transform: translateX(100%) rotate(-50deg);
+    @keyframes showLogin{
+        0%{
+            transform: translate(100%, 35%);
         }
         100% {
             opacity: 100%;
-            transform: translateX(0%) rotate(0deg);
+            transform: translate(0%, 0%);
+            transform: rotate(-25deg);
         }
     }
 `
@@ -89,7 +100,7 @@ export const Button = styled.button`
     display: flex;
     align-items: center;
     font-size: 1.5vw;
-    margin: 5px 25px 5px 25px;
+    margin: 5px 0px 5px 0px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     
@@ -103,7 +114,7 @@ export const Line = styled.div`
     display: flex;
     flex-direction: row;
     margin-top: 1vh;
-    justify-content: space-evenly;
+    justify-content: center;
     height: fit-content;
-    width: 80%
+    width: 100%;
 `
